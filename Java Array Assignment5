@@ -1,0 +1,36 @@
+class Array_Assignment5 {
+
+	public static int[] findNumbers(int num1, int num2) {
+		int[] numbers = new int[6];
+		int count=0;
+		while(num1<num2+1 & count<numbers.length) {
+			if(num1%15==0 && num1!=0 && num1>0) {
+				if((num1>=10 && num1<=99) && (num2>=10 && num2<=99)) {
+				numbers[count]=num1;
+				count++;
+				}
+			}
+			num1++;	
+	}
+		// Implement your code here
+		return numbers;
+}
+
+	public static void main(String[] args) {
+		int num1 = -20;
+		int num2 = -4;
+
+		int[] numbers = findNumbers(num1, num2);
+		if (numbers[0] == 0) {
+			System.out.println("There is no such number!");
+		} else {
+			for (int index = 0; index <= numbers.length - 1; index++) {
+				if (numbers[index] == 0) {
+					break;
+				}
+				System.out.println(numbers[index]);
+			}
+		}
+
+	}
+}
