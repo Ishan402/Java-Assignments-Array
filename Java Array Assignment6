@@ -1,0 +1,25 @@
+
+public class Array_Assignment6 {
+
+	public static int findTotalCount(int[] numbers) {
+		//Implement your code here and change the return value accordingly
+		int count=0;
+		int i=0;
+		while(i<numbers.length) {
+			if(((i+1)<numbers.length) && (numbers[i]==numbers[i+1])) {
+			++count;
+			}
+			i++;
+		}
+        return count;
+	}
+
+	public static void main(String[] args) {
+		int[] numbers = { 1, 1, 5, 100, -20, 6, 0, 0 };
+		System.out.println("Count of adjacent occurrence: "+findTotalCount(numbers));
+		
+		int[] numbers1 = { 5, 6, 6, 6, 12, 1, 1, 0, 0 };
+		System.out.println("Count of adjacent occurrence: "+findTotalCount(numbers1));
+	}
+} 
+ 
