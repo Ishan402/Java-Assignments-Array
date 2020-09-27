@@ -1,0 +1,63 @@
+class Student{
+    //Implement your code here
+	private int[] marks;
+	private char[] grade;
+	
+	Student(int[] marks){
+		this.marks = marks;
+		this.grade = new char[this.marks.length];
+	}
+	
+	public int[] getMarks() {
+		return marks;
+	}
+	public void setMarks(int[] marks) {
+		this.marks = marks;
+	}
+	public char[] getGrade(){
+		return grade;
+	}
+	public void setGrade(char[] grade) {
+		this.grade = grade;
+	}
+	
+	void findGrade() {
+		for(int i=0; i<this.marks.length; i++) {
+			if(this.marks[i]>=92 && this.marks[i]<=100) {
+				this.grade[i]='E';
+			}
+			else if(this.marks[i]>=85 && this.marks[i]<92) {
+				this.grade[i]='A';
+			}
+			else if(this.marks[i]>=70 && this.marks[i]<85) {
+				this.grade[i]='B';
+			}
+			else if(this.marks[i]>=65 && this.marks[i]<70) {
+				this.grade[i]='C';
+			}
+			else if(this.marks[i]>=0 && this.marks[i]<65) {
+				this.grade[i]='D';
+			}
+			else {
+				this.grade[i]='F';
+			}
+		}
+	}
+	
+}
+
+public class Array_Assignment4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] marks = { 79, 87, 97, 65, 78, 99, 66 }; 
+		Student student = new Student(marks);
+		student.findGrade();
+        System.out.println("Grades corresponding to the marks are : ");
+		char[] grades = student.getGrade();
+		for (int index = 0; index < grades.length; index++) {
+			System.out.print(grades[index] + " ");
+		}
+	}
+
+}
