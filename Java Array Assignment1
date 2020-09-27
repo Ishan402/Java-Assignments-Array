@@ -1,0 +1,65 @@
+class Teacher{
+	
+	private String[] teacherName;
+	private String[] subject;
+	private double[] salary;
+	private int limit;
+	
+	Teacher(String[] teacherName, String[] subject, double[] salary, int limit){
+		this.teacherName = teacherName;
+		this.subject = subject;
+		this.salary = salary;
+		this.limit = limit;
+	}
+	
+	public String[] getTeacherName() {
+		return teacherName;
+	}
+	public void setTeacherName(String[] teacherName) {
+		this.teacherName = teacherName;
+	}
+	public String[] getSubject() {
+		return subject;
+	}
+	public void setSubject(String[] subject) {
+		this.subject = subject;
+	}
+	public double[] getSalary() {
+		return salary;
+	}
+	public void setSalary(double[] salary) {
+		this.salary = salary;
+	}
+	
+	public void display() {
+		
+		int i = this.limit-1;
+		System.out.print("Name : "+this.teacherName[i]+", ");
+		System.out.print("Subject : "+this.subject[i]+", ");
+		System.out.print("Salary : "+this.salary[i]+" ");
+		System.out.println();
+	}
+}
+
+public class Array_Assignment1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String teacherName[] = {"Alex", "John", "Sam", "Maria"};
+		String subject[] = {"Java Fundamentals", "RDBMS", "Networking", "Python"};
+		double salary[] = {1200L, 800L, 900L, 900L};
+		
+		Teacher teacherObject1 = new Teacher(teacherName, subject, salary, 1);
+		teacherObject1.display();
+		
+		Teacher teacherObject2 = new Teacher(teacherName, subject, salary, 2);
+		teacherObject2.display();
+		
+		Teacher teacherObject3 = new Teacher(teacherName, subject, salary, 3);
+		teacherObject3.display();
+		
+		Teacher teacherObject4 = new Teacher(teacherName, subject, salary, 4);
+		teacherObject4.display();
+	}
+
+}
